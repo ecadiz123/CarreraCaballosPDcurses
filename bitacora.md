@@ -10,6 +10,5 @@
 - Familiarizarse con libreria pdcurses
 ## 12/04
 - Se hace bocetos para la aplicacion y como se va a ver
-- Se decide usar clases para algunos elementos:
-    - Clase caballo: atributos son nombre, posicion(x,y), suerte. Metodos serian 
-    
+- Se decide usar clases para algunos elementos
+- Se decide hacer archivos de cabezera para elementos separados.
