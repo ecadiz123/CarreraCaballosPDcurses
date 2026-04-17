@@ -28,6 +28,7 @@ class hipodromo{
 	void quitar_caballo(caballo caballo_eliminar);
 	void add_caballo(caballo caballo_add);
 	//modificar tamaño pista
+	void mod_largo();
 	void add_largo();//llamar solo cuando se quiera añadir 1 espacio horizontal
 	void quitar_largo();//llamar solo cuando se quiera quitar 1 espacio horizontal
 
