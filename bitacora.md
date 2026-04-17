@@ -12,3 +12,8 @@
 - Se hace bocetos para la aplicacion y como se va a ver
 - Se decide usar clases para algunos elementos
 - Se decide hacer archivos de cabezera para elementos separados.
+## 16/04
+- Se define archivos de cabecera para las clases
+- Se implementan ciertas funciones
+- Se terminan menu y carrera, falta juntarlos con las clases
+- La reunion fue hecha mediante discord
