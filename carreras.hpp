@@ -3,7 +3,8 @@
 class caballo{
 
     public :
-    int posicion;
+    int posicion_x;
+	int posicion_y;
     int suerte;
     char caracter;
 
