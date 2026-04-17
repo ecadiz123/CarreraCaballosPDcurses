@@ -30,11 +30,11 @@ class hipodromo{
 	//modificar tamaño pista
 	void add_largo();//llamar solo cuando se quiera añadir 1 espacio horizontal
 	void quitar_largo();//llamar solo cuando se quiera quitar 1 espacio horizontal
-	//decidir ganador
-	//hacer el roll
-	//mover el caballo 
+
+	void mover_caballo(caballo caballo_que_se_mueve);
 	//comenzar carrera
-	//terminar carrera
+	void carrera(); //contiene el loop de la carrera , al final ordena en orden de llegada a los caballos.
+	
 
 
 
