@@ -14,15 +14,15 @@ class hipodromo{
     private:
 	caballo caballos[5];
 	int n_caballos;
-	int pos_x;
-	int pos_y;
+	int pos_x;//posicion de la ventana
+	int pos_y;//posicion ventana
 	int largo_y;
 	int largo_x;
 	WINDOW *pista;
 	int pos_llegada_x;
 
     public:
-	hipodromo(int pos_y,int pos_x, caballo caballos[5]);//constructor, toma arreglo 5 caballos y posicion de hipodromo en pantalla
+	hipodromo(int pos_y,int pos_x, caballo caballos_ingreso[5]);//constructor, toma arreglo 5 caballos y posicion de hipodromo en pantalla
 	
 	//modificar cantidad caballos
 	void quitar_caballo(caballo caballo_eliminar);
