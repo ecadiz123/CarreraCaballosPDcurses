@@ -17,3 +17,6 @@
 - Se implementan ciertas funciones
 - Se terminan menu y carrera, falta juntarlos con las clases
 - La reunion fue hecha mediante discord
+## 17/04
+- Se junta todo lo hecho en main y carreras.cpp
+- Reunion Hecha mediante discord
