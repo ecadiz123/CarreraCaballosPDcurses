@@ -18,7 +18,7 @@
         caballos[i]=caballos_ingreso[i];
         }
         n_caballos=5;//comienza con 5 por defecto
-        pos_llegada_x=getmaxx(pista)-3;//llegada por defecto es el anterior a llegar al borde
+        pos_llegada_x=getmaxx(pista)-2;//llegada por defecto es el anterior a llegar al borde
 
     };//constructor, toma arreglo 5 caballos y posicion de hipodromo en pantalla
 	
@@ -68,7 +68,7 @@
             largo_x++;
             pos_llegada_x++;
             wresize(pista,largo_y,largo_x);
-            refresh();
+            //refresh();
             wclear(pista);//limpia la linea que queda atras
             wrefresh(pista);
             box(pista,0,0);
@@ -94,7 +94,7 @@
             largo_x--;
             pos_llegada_x--;
             wresize(pista, largo_y, largo_x);
-            refresh();
+            //refresh();
             wrefresh(pista);
             box(pista, 0, 0);
             wrefresh(pista); // aparece caja
@@ -110,6 +110,13 @@
     // comenzar carrera
     void hipodromo::carrera() {
 {
+    wclear(pista);
+    box(pista,0,0);
+    wrefresh(pista);
+    for(int i=0;i<5;i++)
+    {
+        caballos[i].posicion_x = 1;
+    }
 
     srand(time(NULL));
         
@@ -122,7 +129,7 @@
             mvwprintw(pista,i,j,"-");
         }
     }
-    refresh();
+    //refresh();
     wrefresh(pista);
 
     int vigilante = 0;  //Vigila quien va en primer lugar 
@@ -144,7 +151,7 @@
         for(int i=0;i<n_caballos;i++)//lanza el "dado" para ver quien avanza
         {
             int random =(rand()%100)+1;
-            if(random>=caballos[i].suerte)
+            if(random<=caballos[i].suerte)
             {
                 caballos[i].posicion_x++;   //Actualizacion de posicion Caballo x
                 mover_caballo(caballos[i]); // mueve Caballo
@@ -152,11 +159,10 @@
         }
         
         wrefresh(pista);
-        refresh();
+        //refresh();
         
         Sleep(50); 
     }
-    getch();
 }
 
     }; // contiene el loop de la carrera , al final ordena en orden de llegada a los caballos.

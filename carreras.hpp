@@ -13,7 +13,6 @@ class Caballo{
 };
 class hipodromo{
     private:
-	Caballo caballos[5];
 	int n_caballos;
 	int pos_x;//posicion de la ventana
 	int pos_y;//posicion ventana
@@ -23,6 +22,7 @@ class hipodromo{
 	int pos_llegada_x;
 
     public:
+	Caballo caballos[5];
 	hipodromo(int pos_y,int pos_x, Caballo caballos_ingreso[5]);//constructor, toma arreglo 5 caballos y posicion de hipodromo en pantalla
 	
 	//modificar cantidad caballos
