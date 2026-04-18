@@ -4,7 +4,7 @@
 #include <ctime>
 #include "carreras.hpp"
 void carrera();
-void escribe_caballo(caballo caballo, WINDOW * ventana);
+void escribe_caballo(Caballo Caballo, WINDOW * ventana);
 int main()
 {
     initscr();
@@ -17,7 +17,7 @@ void carrera()
 {
 
     srand(time(NULL));
-    caballo arreglo_caballos[5];
+    Caballo arreglo_caballos[5];
     for(int i=0;i<5;i++)
     {
         arreglo_caballos[i].caracter = 65+i;
@@ -41,7 +41,7 @@ void carrera()
     refresh();
     wrefresh(ventana_carrerra);
 
-    int pos_caballo_x = 1;  //Posicion inicial de caballo x
+    int pos_caballo_x = 1;  //Posicion inicial de Caballo x
     int pos_caballo_y = 1;
     int vigilante = 0;  //Vigila quien va en primer lugar 
 
@@ -70,7 +70,7 @@ void carrera()
         {
             if(int random =(rand()%100)+1>arreglo_caballos[i].suerte)
             {
-                arreglo_caballos[i].posicion_x++;   //Actualizacion de posicion caballo x
+                arreglo_caballos[i].posicion_x++;   //Actualizacion de posicion Caballo x
             }
             escribe_caballo(arreglo_caballos[i],ventana_carrerra);
         }
@@ -83,8 +83,8 @@ void carrera()
     getch();
 }; 
 
-void escribe_caballo(caballo caballo, WINDOW * ventana)
+void escribe_caballo(Caballo Caballo, WINDOW * ventana)
 {
-    mvwprintw(ventana,caballo.posicion_y,caballo.posicion_x,"%c",caballo.caracter);    //Reimpresion de posicion de x
-    mvwprintw(ventana,caballo.posicion_y,caballo.posicion_x-1," ");  //borrado de paso de x por la pista
+    mvwprintw(ventana,Caballo.posicion_y,Caballo.posicion_x,"%c",Caballo.caracter);    //Reimpresion de posicion de x
+    mvwprintw(ventana,Caballo.posicion_y,Caballo.posicion_x-1," ");  //borrado de paso de x por la pista
 }
