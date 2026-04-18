@@ -21,7 +21,9 @@
         pos_llegada_x=getmaxx(pista)-2;//llegada por defecto es el anterior a llegar al borde
 
     };//constructor, toma arreglo 5 caballos y posicion de hipodromo en pantalla
-	
+    char hipodromo::ganador(){
+        return caballos[gana].caracter;
+    }
 	//modificar cantidad caballos
 	void hipodromo:: mod_caballo_cantidad(int nuevo_n){
         
@@ -145,6 +147,7 @@
             if(caballos[i].posicion_x>vigilante)
             {
                 vigilante = caballos[i].posicion_x;//toma pos de Caballo mas adelante
+                gana=i;//posicion de caballo en el arreglo de quien gana
             }
         }
          

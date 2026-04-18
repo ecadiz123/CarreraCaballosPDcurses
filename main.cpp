@@ -355,7 +355,7 @@ int main()
 " | |___ / ___ \\| |_) / ___ \\| |___| |__| |_| |___) |",
 "  \\____/_/   \\_\\____/_/   \\_\\_____|_____\\___/|____/ "
 };
-int altura_titulo = 10;
+int altura_titulo = 10;//altura titulo se va a usar de referencia para coordenadas de todo
 
     attron(A_BOLD);
     for (int i = 0; i < 10; i++) {
@@ -386,7 +386,8 @@ int altura_titulo = 10;
     string choices [4] = {"Competir", "Editar Caballo", "Editar Hipodromo", "Salir"};
     int choice;
     int highlight = 0;
-
+    WINDOW * resultado = newwin (5, 22, (altura_titulo+2+8)+2+15,5); // ventana que imprime resultado
+    
 
     while(1){
         box(menuwin,0,0);
@@ -416,6 +417,11 @@ int altura_titulo = 10;
             switch (highlight){
                 case 0:
                 hipo.carrera();
+               
+                mvwprintw(resultado,1,1,"Caballo Ganador: %c",hipo.ganador());
+                mvwprintw(resultado,2,1,"Suerte Ganador: %d",hipo.caballos[hipo.gana].suerte);
+                box(resultado,0,0);
+                wrefresh(resultado);
                 break;
                 
                 case 1:

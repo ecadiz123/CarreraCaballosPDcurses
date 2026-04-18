@@ -22,9 +22,11 @@ class hipodromo{
 	int pos_llegada_x;
 
     public:
+	int gana;
 	Caballo caballos[5];
 	hipodromo(int pos_y,int pos_x, Caballo caballos_ingreso[5]);//constructor, toma arreglo 5 caballos y posicion de hipodromo en pantalla
-	
+	char ganador();
+
 	//modificar cantidad caballos
 	void mod_caballo_cantidad(int nuevo_n);
 	//modificar tamaño pista
