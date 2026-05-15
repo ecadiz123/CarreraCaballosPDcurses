@@ -1,5 +1,10 @@
 #include "carreras.hpp"
-#include <windows.h>        //Uso de sleep
+#ifdef _WIN32
+#include <windows.h>        //Uso de sleep en windows
+#endif
+#ifdef __linux__
+#include <unistd.h>
+#endif
 #include <cstdlib>          //Uso de Rand
 #include <ctime>
 
@@ -163,8 +168,12 @@
         
         wrefresh(pista);
         //refresh();
-        
+#ifdef _WIN32
         Sleep(50); 
+#endif
+#ifdef __linux__
+       usleep(50*1000); // sleep por 50 ms
+#endif
     }
 }
 
